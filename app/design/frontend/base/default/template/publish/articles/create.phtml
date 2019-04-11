@@ -1,0 +1,12 @@
+
+<?php $article = $this->getArticle() ?>
+<form action="<?php echo $this->getUrl('articles/index/post/id/' . $this->getArticle()->getId()); ?>" method="post">
+    <ul class="form-list">
+        <?php $this->getArticle()->getId()?>
+        <li><label>Name</label><br>
+            <input class="input-text required-entry" id="name" value="<?php echo $article->getName() ?>" name="name" style="width: 1250px;" type="text"></li>
+        <li><label>Description</label><br>
+            <textarea class="input-text required-entry" id="dscr" name="dscr" style="width: 1500px;" type="text"><?php echo $article->getDscr() ?></textarea></li>
+
+    </ul><button class="button btn-add" type="submit"><span>Add</span></button>
+</form>

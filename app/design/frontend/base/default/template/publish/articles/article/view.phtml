@@ -1,0 +1,21 @@
+
+<button type="button" id="delete" title="Delete" class="button btn-remove-address">Delete</button>
+<?php $article = $this->getArticle() ?>
+<a href="<?php echo $this->getUrl('articles/index/edit/id/'.$article->id);?>"><button type="button" id="edit" title="Edit" class="button btn-remove-address">Edit</button></a>
+
+<h1><?php echo Mage::helper('publish_articles')->__('View article "%s"', $article->getName()) ?></h1>
+<p><?php echo $article->getDscr() ?></p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $('#delete').click(function() {
+        $.ajax({
+            type: "POST",
+            url: "<?php echo $this->getUrl('articles/index/delete');?>",
+            data:{id : <?php echo $article->id ?>},
+            cache: false,
+            success: function(){
+                window.location.href = '<?php echo $this->getUrl('articles/index/post'); ?>'
+            }
+        })
+    });
+</script>

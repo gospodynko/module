@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <publish_articles>
+                        <title>Articles</title>
+                        <sort_order>1</sort_order>
+                    </publish_articles>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <publish_articles translate="title" module="publish_articles">
+            <title>Articles</title>
+            <sort_order>55</sort_order>
+            <action>adminhtml/articles</action>
+        </publish_articles>
+    </menu>
+
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <publish_articles translate="title">
+                                        <title>Publish articles</title>
+                                    </publish_articles>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

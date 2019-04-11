@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <adminhtml_articles_index>
+        <reference name="content">
+            <block type="publish_articles/adminhtml_articles" name="articles.grid_container" />
+        </reference>
+    </adminhtml_articles_index>
+
+    <adminhtml_articles_new>
+        <update handle="adminhtml_articles_edit"/>
+    </adminhtml_articles_new>
+
+    <adminhtml_articles_edit>
+        <reference name="content">
+            <block type="publish_articles/adminhtml_edit" name="articles.edit" />
+        </reference>
+    </adminhtml_articles_edit>
+</layout>

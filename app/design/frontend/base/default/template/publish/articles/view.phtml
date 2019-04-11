@@ -1,0 +1,7 @@
+<a href="<?php echo $this->getUrl('articles/index/create'); ?>"><button class="button btn-add">add</button></a>
+<?php foreach ($this->getCollection() as $item): ?>
+<div class="quote-item">
+    <h4><a href="<?php echo $this->getRowUrl($item) ?>"><?php echo $item->getName() ?></a></h4>
+    <p><?php echo $item->getDscr() ?></p>
+</div>
+<?php endforeach ?>

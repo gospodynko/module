@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="1.0.0">
+    <publish_module_index_index>
+        <reference name="content">
+            <block type="publish_module/content" name="module.all" />
+        </reference>
+    </publish_module_index_index>
+</layout>

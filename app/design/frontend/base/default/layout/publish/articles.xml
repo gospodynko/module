@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <publish_articles_index_index>
+        <reference name="content">
+            <block type="publish_articles/content" name="articles.all" />
+        </reference>
+    </publish_articles_index_index>
+    <publish_articles_index_view>
+        <reference name="content">
+            <block type="publish_articles/article_content" name="article.item" />
+        </reference>
+    </publish_articles_index_view>
+     <publish_articles_index_create>
+        <reference name="content">
+            <block type="publish_articles/article_create" name="article.item" />
+        </reference>
+    </publish_articles_index_create>
+    <publish_articles_index_edit>
+        <reference name="content">
+            <block type="publish_articles/article_edit" name="article.item" />
+        </reference>
+    </publish_articles_index_edit>
+    <publish_articles_index_pagination>
+        <reference name="content">
+            <block name="collection_ticket" type="publish_articles/content" template="publish/articles/pagination.phtml"/>
+        </reference>
+    </publish_articles_index_pagination>
+</layout>

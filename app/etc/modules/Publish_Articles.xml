@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Publish_Articles>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Publish_Articles>
+    </modules>
+</config>
