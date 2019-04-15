@@ -1,7 +1,8 @@
 <a href="<?php echo $this->getUrl('articles/index/create'); ?>"><button class="button btn-add">add</button></a>
 <?php foreach ($this->getCollection() as $item): ?>
 <div class="quote-item">
-    <h4><a href="<?php echo $this->getRowUrl($item) ?>"><?php echo $item->getName() ?></a></h4>
-    <p><?php echo $item->getDscr() ?></p>
+    <?php $helper = Mage::helper('core');?>
+    <h4><a href="<?php echo $this->getRowUrl($item) ?>"><?php echo $helper->escapeHtml($item->getName()) ?></a></h4>
+    <p><?php echo mb_strimwidth($helper->escapeHtml($item->getDscr()),0,100,'...') ?></p>
 </div>
 <?php endforeach ?>

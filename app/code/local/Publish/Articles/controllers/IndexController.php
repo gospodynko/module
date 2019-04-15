@@ -6,7 +6,6 @@ class Publish_Articles_IndexController extends Mage_Core_Controller_Front_Action
     {
         $this->loadLayout()
             ->renderLayout();
-        $conf = Mage::getStoreConfig('publish_articles/basic_config/limit', Mage::app()->getStore());
     }
 
     public function viewAction()
@@ -28,7 +27,7 @@ class Publish_Articles_IndexController extends Mage_Core_Controller_Front_Action
             $this->loadLayout()
                 ->renderLayout();
         } else {
-            Mage::getSingleton('core/session')->addSuccess(Mage::helper('publish_articles')
+            Mage::getSingleton('core/session')->addError(Mage::helper('publish_articles')
                 ->__('Article cannot create'));
             return $this->_redirect('*/*/');
         }
@@ -54,7 +53,7 @@ class Publish_Articles_IndexController extends Mage_Core_Controller_Front_Action
 
             return $this->_redirect('*/*/');
         } else {
-            Mage::getSingleton('core/session')->addSuccess(Mage::helper('publish_articles')
+            Mage::getSingleton('core/session')->addError(Mage::helper('publish_articles')
                 ->__('Article cannot create'));
             return $this->_redirect('*/*/');
         }
@@ -70,7 +69,7 @@ class Publish_Articles_IndexController extends Mage_Core_Controller_Front_Action
                 ->setArticleId($article_id);
             $this->renderLayout();
         } else {
-            Mage::getSingleton('core/session')->addSuccess(Mage::helper('publish_articles')
+            Mage::getSingleton('core/session')->addError(Mage::helper('publish_articles')
                 ->__('Article cannot edit'));
             return $this->_redirect('*/*/');
         }
@@ -86,7 +85,7 @@ class Publish_Articles_IndexController extends Mage_Core_Controller_Front_Action
                 ->__('Article successfully delete'));
             $data->delete();
         } else {
-            Mage::getSingleton('core/session')->addSuccess(Mage::helper('publish_articles')
+            Mage::getSingleton('core/session')->addError(Mage::helper('publish_articles')
                 ->__('Article cannot delete'));
             return $this->_redirect('*/*/');
         }
